@@ -79,3 +79,7 @@ background-size: 100% 100%;
 border-color: #5142FC
 card-color: #343444
 body-color: #14141f
+
+
+# Author
+- [@mohit200008](https://www.github.com/mohit200008)
