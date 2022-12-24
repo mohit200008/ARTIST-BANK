@@ -1,7 +1,6 @@
-# Getting Started with Create React App
+# Problem Statement
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
+By the time has changed everything has been switched from physical to online mode with the help of technology, then why artist’s remain on their old methods of paint brush and paper,   now the artwork is beyond expectations after using technology, but there is a fear of copying of artwork, straling and other threats as well to cure the threat we here proposed a Artist bank which will help out artist’s to protect their artwork from the steelers and get the appropriate value of their artwork.
 ## Available Scripts
 
 In the project directory, you can run:
