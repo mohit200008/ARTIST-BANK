@@ -3,7 +3,22 @@
 By the time has changed everything has been switched from physical to online mode with the help of technology, then why artist’s remain on their old methods of paint brush and paper,   now the artwork is beyond expectations after using technology, but there is a fear of copying of artwork, straling and other threats as well to cure the threat we here proposed a Artist bank which will help out artist’s to protect their artwork from the steelers and get the appropriate value of their artwork.
 ## Available Scripts
 
-In the project directory, you can run:
+#frontend pages
+
+Page 1
+In the project dire![nft1](https://user-images.githubusercontent.com/56565813/213138201-fd828a04-2753-47e3-ac58-7e9ea926210f.png)
+
+Page 2
+![nft2](https://user-images.githubusercontent.com/56565813/213138348-1602be2e-a23e-45cf-8123-9df75ba86342.png)
+
+Page 3
+![nft3](https://user-images.githubusercontent.com/56565813/213138432-80d6072f-80ca-4e10-ad07-9212fe7dec61.png)
+
+Page 4
+![nft4](https://user-images.githubusercontent.com/56565813/213138545-1c6f0594-401d-4761-b6f5-653d28a43806.png)
+
+
+ctory, you can run:
 
 ### `npm start`
 
