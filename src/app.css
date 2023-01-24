@@ -57,3 +57,66 @@ footer {
   border-radius: 2em;
   background: linear-gradient(-45deg, #e250e5, #3037ff, #fafafa, #4b50e6);
 }
+
+
+/* ...and then apply it: */
+
+
+
+@keyframes slide-left {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+
+
+@keyframes slide-right {
+  from {
+    transform: translateX(+100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes scale-up {
+  0%{
+    scale: 1;
+  }
+ 
+  100%{
+    scale: 1.1;
+
+  }
+}
+
+.slide-right {
+  animation: slide-right 1000ms;
+}
+
+.slide-left {
+  animation: slide-left 1000ms;
+}
+.fade-in{
+  animation: fade-in 1000ms;
+}
+
+.scale-up:hover{
+  animation: scale-up 1s linear  infinite alternate;
+
+}

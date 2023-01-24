@@ -1,98 +1,49 @@
-import React, { useRef, useEffect } from "react";
-import "./header.css";
-import { Container } from "reactstrap";
+import React from "react";
+import { Container, Row, Col } from "reactstrap";
+import { Link } from "react-router-dom";
+import "./hero-section.css";
 
-import { NavLink, Link } from "react-router-dom";
+import heroImg from "../../assets/images/hero.jpg";
 
-const NAV__LINKS = [
-  {
-    display: "Home",
-    url: "/home",
-  },
-  {
-    display: "Market",
-    url: "/market",
-  },
-  {
-    display: "Create",
-    url: "/create",
-  },
-  {
-    display: "Contact",
-    url: "/contact",
-  },
-];
-
-const Header = () => {
-  const headerRef = useRef(null);
-
-  const menuRef = useRef(null);
-
-  useEffect(() => {
-    window.addEventListener("scroll", () => {
-      if (
-        document.body.scrollTop > 80 ||
-        document.documentElement.scrollTop > 80
-      ) {
-        headerRef.current.classList.add("header__shrink");
-      } else {
-        headerRef.current.classList.remove("header__shrink");
-      }
-    });
-
-    return () => {
-      window.removeEventListener("scroll");
-    };
-  }, []);
-
-  const toggleMenu = () => menuRef.current.classList.toggle("active__menu");
-
+const HeroSection = () => {
   return (
-    <header className="header" ref={headerRef}>
+    <section className="hero__section">
       <Container>
-        <div className="navigation">
-          <div className="logo">
-            <h2 className=" d-flex gap-2 align-items-center ">
-              <span>
-                <i class="ri-fire-fill"></i>
-              </span>
-              Artist Bank
-            </h2>
-          </div>
+        <Row>
+          <Col lg="6" md="6" className="slide-left">
+            <div className="hero__content">
+              <h2>
+                Discover rare digital art and collect
+                <span>sell extraordinary</span> NFTs
+              </h2>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Deleniti excepturi omnis neque adipisci sequi ullam unde in
+                minus quis quos.
+              </p>
 
-          <div className="nav__menu" ref={menuRef} onClick={toggleMenu}>
-            <ul className="nav__list">
-              {NAV__LINKS.map((item, index) => (
-                <li className="nav__item" key={index}>
-                  <NavLink
-                    to={item.url}
-                    className={(navClass) =>
-                      navClass.isActive ? "active" : ""
-                    }
-                  >
-                    {item.display}
-                  </NavLink>
-                </li>
-              ))}
-            </ul>
-          </div>
+              <div className="hero__btns d-flex align-items-center gap-4">
+                <button className=" explore__btn d-flex align-items-center gap-2">
+                  <i class="ri-rocket-line"></i>{" "}
+                  <Link to="/market">Explore</Link>
+                </button>
+                <button className=" create__btn d-flex align-items-center gap-2">
+                  <i class="ri-ball-pen-line"></i>
+                  <Link to="/create">Create</Link>
+                </button>
+              </div>
+            </div>
+          </Col>
 
-          <div className="nav__right d-flex align-items-center gap-5 ">
-            <button className="btn d-flex gap-2 align-items-center">
-              <span>
-                <i class="ri-wallet-line"></i>
-              </span>
-              <Link to="/wallet">Connect Wallet</Link>
-            </button>
-
-            <span className="mobile__menu">
-              <i class="ri-menu-line" onClick={toggleMenu}></i>
-            </span>
-          </div>
-        </div>
+          <Col lg="6" md="6" className="slide-right">
+            <div className="hero__img">
+              <img src={heroImg} alt="" className="w-100" />
+            </div>
+          </Col>
+        </Row>
       </Container>
-    </header>
+    </section>
   );
 };
 
-export default Header;
+export default HeroSection;
